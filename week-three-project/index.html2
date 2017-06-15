@@ -21,8 +21,8 @@
 
 					<br>
 
-					<input type="button" class="btn-style num-bg num" value="C" onclick="document.calculator.result.value += ''" ;>
-					<input type="button" class="btn-style numb-bg num" id="result" name="result">
+					<input type="button" class="btn-style num-bg num" value="C" onclick="buttonClear()" ;>
+					<input type="button" class="btn-style num-bg num" id="result" name="result">
 
 					<br>
 
@@ -49,7 +49,7 @@
 
 					<input type="button" class="btn-style num-bg num" value="0" onclick="document.calculator.result.value += '0'" ;>
 					<input type="button" class="btn-style num-bg num" value="." onclick="buttonDec()" ;>
-					<input type="button" class="btn-style num-bg num" value="=" onclick="buttonEq()" ;>
+					<input type="button" class="btn-style num-bg num" value="=" onclick="document.calculator.result.value = '=' + eval(document.calculator.result.value)" ;>
 					<input type="button" class="btn-style num-bg num" value="+" onclick="buttonAdd()" ;>
 
 				</div>

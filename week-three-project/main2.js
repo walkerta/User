@@ -29,3 +29,15 @@ function buttonDec(){
   document.calculator.result.style.textAlign="right";
 
 }
+
+function buttonClear(){
+  document.calculator.result.value = "";
+  document.calculator.result.style.textAlign="right";
+}
+
+function buttonEq(){
+  document.calculator.result.value += "=";
+  document.calculator.result.tyle.textAlign="right"
+
+
+}

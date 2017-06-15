@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Calculator</title>
+
+</head>
+<script src="main2.js"></script>
+<link rel="stylesheet" href="main2.css">
+
+<body>
+
+	<form class="calculator_form" name="calculator">
+
+
+		<div id="background">
+			<!-- Main background -->
+
+			<div id="main">
+				<div id="first-rows">
+
+					<br>
+
+					<input type="button" class="btn-style num-bg num" value="C" onclick="document.calculator.result.value += ''" ;>
+					<input type="button" class="btn-style numb-bg num" id="result" name="result">
+
+					<br>
+
+
+					<input type="button" class="btn-style num-bg num" value="7" onclick="document.calculator.result.value += '7'" ;>
+					<input type="button" class="btn-style num-bg num" value="8" onclick="document.calculator.result.value += '8'" ;>
+					<input type="button" class="btn-style num-bg num" value="9" onclick="document.calculator.result.value += '9'" ;>
+					<input type="button" class="btn-style num-bg num" value="/" onclick="buttonDv()" ;>
+
+
+					<br>
+					<input type="button" class="btn-style num-bg num" value="4" onclick="document.calculator.result.value += '4'" ;>
+					<input type="button" class="btn-style num-bg num" value="5" onclick="document.calculator.result.value += '5'" ;>
+					<input type="button" class="btn-style num-bg num" value="6" onclick="document.calculator.result.value += '6'" ;>
+					<input type="button" class="btn-style num-bg num" value="*" onclick="buttonMulti()" ;>
+
+					<br>
+					<input type="button" class="btn-style num-bg num" value="1" onclick="document.calculator.result.value += '1'" ;>
+					<input type="button" class="btn-style num-bg num" value="2" onclick="document.calculator.result.value += '2'" ;>
+					<input type="button" class="btn-style num-bg num" value="3" onclick="document.calculator.result.value += '3'" ;>
+					<input type="button" class="btn-style num-bg num" value="-" onclick="buttonSub()" ;>
+
+					<br>
+
+					<input type="button" class="btn-style num-bg num" value="0" onclick="document.calculator.result.value += '0'" ;>
+					<input type="button" class="btn-style num-bg num" value="." onclick="buttonDec()" ;>
+					<input type="button" class="btn-style num-bg num" value="=" onclick="buttonEq()" ;>
+					<input type="button" class="btn-style num-bg num" value="+" onclick="buttonAdd()" ;>
+
+				</div>
+
+			</div>
+
+	</form>
+
+
+
+</body>
+
+</html>

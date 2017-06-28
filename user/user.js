@@ -1,8 +1,9 @@
 var express = require('express');
 var session = require('express-session');
 var mustache = require('mustache-express');
+const bodyParser = require ('body-parser');
 
-var app = express
+var app = express();
 app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
 app.set('views', './views');
@@ -14,32 +15,15 @@ app.use(session({
 
 }));
 //**middleware -
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(function(req, res, next) {
   req.session.users = {
-    Edwin: {
-      password: 'bacon1',
-      loggedIn: false
-    },
+    admin: "password"
 
-    Jon: {
-      password: 'cheese',
-      loggedIn: false
-    },
-
-    Josh: {
-      password: 'apples',
-      logeqgedIn: false
-    }
   };
 
-});
 //**callback
 next();
-
-});
-
-app.get('/', function(req, res, next) {
-  res.render('user');
 
 });
 
@@ -47,14 +31,15 @@ app.get('/', function(req, res, next) {
   if (req.session.username) {
     res.send('Hello' + req.session.username)
   } else {
-    res.redirect('login')
+    res.render('user')
 
   }
 })
 
 //**boolean expression
 app.post('/login', function(req, res, next) {
-  if (res.session.users[req.body.username] === req.boby.password) {
+console.log(req.body.username);
+  if (req.session.users[req.body.username] === req.body.password) {
     req.session.username = req.body.username;
 
   }
